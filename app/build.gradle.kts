@@ -84,5 +84,8 @@ dependencies {
     ksp("com.google.dagger:hilt-android-compiler:$hiltVersion")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
-    
+    val coroutineVersion = "1.8.0"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutineVersion")
 }
