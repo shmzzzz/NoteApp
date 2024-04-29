@@ -145,7 +145,9 @@ fun NoteRow(
         shadowElevation = 6.dp
     ) {
         Column(modifier = Modifier
-            .clickable { }
+            .clickable {
+                onNoteClicked(note)
+            }
             .padding(
                 horizontal = 14.dp,
                 vertical = 6.dp
