@@ -3,7 +3,7 @@ package com.example.noteapp.data
 import com.example.noteapp.model.Note
 
 class NotesDataSource {
-    fun loadNotes: List<Note> {
+    fun loadNotes(): List<Note> {
         return listOf(
             Note(title = "A good day", description = "We went on a vacation by the lake"),
             Note(
