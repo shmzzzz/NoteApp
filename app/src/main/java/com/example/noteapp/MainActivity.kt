@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import com.example.noteapp.data.NotesDataSource
 import com.example.noteapp.screen.NoteScreen
 import com.example.noteapp.ui.theme.NoteAppTheme
 
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
             NoteAppTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     NoteScreen(
-                        notes = emptyList(),
+                        notes = NotesDataSource().loadNotes(),
                         onAddNote = {},
                         onRemoveNote = {},
                     )
