@@ -16,7 +16,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             NoteAppTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    NoteScreen()
+                    NoteScreen(
+                        notes = emptyList(),
+                        onAddNote = {},
+                        onRemoveNote = {},
+                    )
                 }
             }
         }
