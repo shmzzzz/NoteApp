@@ -2,6 +2,9 @@ package com.example.noteapp.data
 
 import com.example.noteapp.model.Note
 
+/**
+ * ダミーデータクラス
+ */
 class NotesDataSource {
     fun loadNotes(): List<Note> {
         return listOf(
