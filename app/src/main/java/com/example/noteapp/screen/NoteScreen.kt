@@ -22,6 +22,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.noteapp.R
+import com.example.noteapp.components.NoteButton
 import com.example.noteapp.components.NoteInputText
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -56,19 +57,32 @@ fun NoteScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NoteInputText(
+                modifier = Modifier.padding(
+                    top = 9.dp,
+                    bottom = 8.dp,
+                ),
                 text = title,
                 label = "Title",
                 onTextChange = {
-                    // change title
+                    if (it.all { char ->
+                            char.isLetter() || char.isWhitespace()
+                        }) title = it
                 }
             )
             NoteInputText(
+                modifier = Modifier.padding(
+                    top = 9.dp,
+                    bottom = 8.dp,
+                ),
                 text = description,
                 label = "Add a note",
                 onTextChange = {
-                    // change description
+                    if (it.all { char ->
+                            char.isLetter() || char.isWhitespace()
+                        }) description = it
                 }
             )
+            NoteButton(text = "save", onClick = { /*TODO*/ })
         }
     }
 }
