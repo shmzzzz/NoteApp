@@ -11,7 +11,7 @@ import com.example.noteapp.model.Note
 @Dao
 interface NoteDatabaseDao {
     @Query("SELECT * FROM notes_table")
-    fun getAll(): List<Note>
+    fun getAll(): kotlinx.coroutines.flow.Flow<List<Note>>
 
     @Query("SELECT * FROM notes_table WHERE id = :id")
     suspend fun getNoteById(id: String): Note
