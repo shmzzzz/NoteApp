@@ -1,7 +1,6 @@
 # NoteApp
 
 - メモアプリ
-- ViewModelを使用する
 
 ## 技術仕様
 
