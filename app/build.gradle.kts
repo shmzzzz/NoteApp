@@ -88,4 +88,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutineVersion")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineVersion")
+
+    val mockkVersion = "1.13.10"
+    testImplementation("io.mockk:mockk:$mockkVersion")
 }
