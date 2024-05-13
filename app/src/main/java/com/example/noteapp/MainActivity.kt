@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             NoteAppTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-//                    val noteViewModel: NoteViewModel by viewModels()
                     val noteViewModel: NoteViewModel by viewModels()
                     NoteApp(noteViewModel)
                 }
